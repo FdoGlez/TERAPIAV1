@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Terapia Acuática para Bebés - Verónica Gil</title>
+    <style>
+        /* Estilos CSS Embebidos */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light Cyan */
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 960px;
+            width: 95%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            color: #add8e6; /* Light Blue */
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #777;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            color: #8f7ae5; /* Lavender */
+            margin-top: 0;
+            border-bottom: 2px solid #d9d9d9;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .profile-info {
+            line-height: 1.8;
+        }
+
+        .profile-info strong {
+            font-weight: bold;
+            color: #5bc0de; /* Turquoise */
+        }
+
+        .specialties-accordion .specialty-item {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .specialties-accordion .specialty-title {
+            background-color: #ffe4e1; /* Light Coral */
+            color: #ff69b4; /* Hot Pink */
+            padding: 10px 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .specialties-accordion .specialty-title:hover {
+            background-color: #f8bbd0; /* Light Pink */
+        }
+
+        .specialties-accordion .specialty-content {
+            padding: 15px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+
+        .appointment-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .appointment-form input[type="text"],
+        .appointment-form input[type="email"],
+        .appointment-form input[type="tel"],
+        .appointment-form input[type="number"],
+        .appointment-form input[type="date"],
+        .appointment-form input[type="time"],
+        .appointment-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .appointment-form button {
+            background-color: #98fb98; /* Pale Green */
+            color: #333;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .appointment-form button:hover {
+            background-color: #8fbc8f; /* Dark Sea Green */
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 10px;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* Estilos para móviles */
+        @media (max-width: 600px) {
+            .container {
+                width: 98%;
+                margin: 10px auto;
+                padding: 15px;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+
+        /* Sombras sutiles */
+        .container, section, .specialties-accordion .specialty-item, .appointment-form input, .appointment-form textarea, .appointment-form button {
+            box-shadow: 2px 2px 5px #ddd;
+        }
+
+        /* Bordes redondeados */
+        .container, section, .specialties-accordion .specialty-item, .appointment-form input, .appointment-form textarea, .appointment-form button {
+            border-radius: 8px;
+        }
+
+        /* Imágenes translúcidas (clase para aplicar a las imágenes) */
+        .transparent-image {
+            max-width: 100%;
+            height: auto;
+            opacity: 0.8;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/logo_veronica_gil.png" alt="Logo Verónica Gil" class="logo">
+            <h1>Clínica de Terapia Acuática para Bebés</h1>
+            <p>Un espacio dedicado al desarrollo y bienestar de tu bebé a través del agua.</p>
+        </header>
+
+        <section>
+            <h2>¿Quién Soy?</h2>
+            <div class="profile-info">
+                <h3>VERONICA GIL</h3>
+                <p><strong>PSICOLOGA</strong> - Estudios varios</p>
+                <p><strong>DEPORTISTA DE ALTO RENDIMIENTO</strong></p>
+                <p>En una combinación de la psicología y la natación de alto rendimiento; así como la pasión por los bebés y sus cualidades. He buscado la forma de aprovechar el agua como medio para realizar una metodología de estimulación temprana. Donde el bebé no solo será más activo, aprenderá a contener la respiración bajo el agua, flotar y desplazarse sin ninguna ayuda.</p>
+            </div>
+            <img src="https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/bebe_nadando_transparente.png" alt="Bebé Nadando" class="transparent-image" style="float: right; max-width: 150px; margin-left: 15px;">
+        </section>
+
+        <section>
+            <h2>Misión</h2>
+            <p>Brindar el primer contacto de la madre y el bebé en un ambiente controlado dentro del agua, realizando actividades, movimientos y estimulación para el bebé dentro del agua. Todo dentro de un ambiente controlado y profesional, fomentando un vínculo seguro y positivo.</p>
+            <img src="https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/bebe_madre_tina_transparente.png" alt="Bebé con Madre" class="transparent-image">
+        </section>
+
+        <section>
+            <h2>Visión</h2>
+            <p>Ser un profesional referente por excelencia, reconocido por el trato humano y el compromiso con la primera experiencia del bebé y su madre a través de un medio tan enriquecedor como el agua, contribuyendo a su desarrollo integral y bienestar emocional.</p>
+            <img src="https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/bebes_alberca_transparente.png" alt="Bebés en Alberca" class="transparent-image">
+        </section>
+
+        <section class="specialties-accordion">
+            <h2>Especialidades</h2>
+            <div class="specialty-item">
+                <div class="specialty-title" onclick="toggleAccordion('general')">
+                    Plática general
+                    <span>&#9660;</span>
+                </div>
+                <div id="general" class="specialty-content">
+                    <p>Introducción a la terapia acuática para bebés, beneficios generales y cómo se desarrolla una sesión típica.</p>
+                </div>
+            </div>
+            <div class="specialty-item">
+                <div class="specialty-title" onclick="toggleAccordion('alcance')">
+                    Alcance dependiendo la edad
+                    <span>&#9660;</span>
+                </div>
+                <div id="alcance" class="specialty-content">
+                    <p>Descripción de las actividades y enfoques específicos según la edad del bebé:
+                        <ul>
+                            <li><strong>0-3 meses:</strong> Adaptación al medio acuático, movimientos suaves, estimulación sensorial. Duración: 30 minutos.</li>
+                            <li><strong>3-6 meses:</strong> Flotación asistida, movimientos de brazos y piernas, juegos de inmersión. Duración: 45 minutos.</li>
+                            <li><strong>6-12 meses:</strong> Mayor independencia en el agua, exploración, desarrollo de habilidades motoras. Duración: 45 minutos.</li>
+                            <li><strong>+12 meses:</strong> Actividades más complejas, juegos de desplazamiento, preparación para la natación autónoma. Duración: 60 minutos.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="specialty-item">
+                <div class="specialty-title" onclick="toggleAccordion('introduccion')">
+                    Cómo introducir al bebé en el agua
+                    <span>&#9660;</span>
+                </div>
+                <div id="introduccion" class="specialty-content">
+                    <p>Consejos y técnicas para una introducción segura y positiva del bebé al agua, minimizando el estrés y fomentando la confianza tanto en el bebé como en la madre/padre.</p>
+                </div>
+            </div>
+            <div class="specialty-item">
+                <div class="specialty-title" onclick="toggleAccordion('beneficios')">
+                    Beneficios de la terapia en el agua
+                    <span>&#9660;</span>
+                </div>
+                <div id="beneficios" class="specialty-content">
+                    <p>Los múltiples beneficios de la terapia acuática incluyen el desarrollo motor, la estimulación sensorial, el fortalecimiento del vínculo madre-bebé/padre-bebé, la relajación, la mejora del sistema cardiorrespiratorio y el bienestar general.</p>
+                </div>
+            </div>
+            <div class="specialty-item">
+                <div class="specialty-title" onclick="toggleAccordion('sigue')">
+                    ¿Qué sigue?
+                    <span>&#9660;</span>
+                </div>
+                <div id="sigue" class="specialty-content">
+                    <p>Información sobre la frecuencia recomendada de las sesiones, cómo continuar el progreso en casa con actividades seguras y la importancia del seguimiento profesional para un desarrollo óptimo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Agendar Cita</h2>
+            <form id="appointmentForm" class="appointment-form">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="pais_ciudad">País - Ciudad:</label>
+                <input type="text" id="pais_ciudad" name="pais_ciudad">
+
+                <label for="nombre_bebe">Nombre del Bebé:</label>
+                <input type="text" id="nombre_bebe" name="nombre_bebe" required>
+
+                <label for="edad_bebe">Edad del Bebé (meses):</label>
+                <input type="number" id="edad_bebe" name="edad_bebe" min="0" required>
+
+                <label for="peso_bebe">Peso del Bebé (kg):</label>
+                <input type="number" id="peso_bebe" name="peso_bebe" step="0.01">
+
+                <label for="padecimientos">Padecimientos (si aplica):</label>
+                <textarea id="padecimientos" name="padecimientos"></textarea>
+
+                <label for="vacunas">Vacunas al día:</label>
+                <input type="text" id="vacunas" name="vacunas">
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios"></textarea>
+
+                <button type="submit">Agendar Cita</button>
+                <div id="errorMessage" class="error-message"></div>
+                <div id="successMessage" class="success-message"></div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Función para desplegar/ocultar el contenido de las especialidades (acordeón)
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const title = content.previousElementSibling;
+            const span = title.querySelector('span');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                span.innerHTML = '&#9660;'; // Flecha hacia abajo
+            } else {
+                content.style.display = 'block';
+                span.innerHTML = '&#9650;'; // Flecha hacia arriba
+            }
+        }
+
+        // Evento listener para el envío del formulario de citas
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('appointmentForm');
+            const errorMessageDiv = document.getElementById('errorMessage');
+            const successMessageDiv = document.getElementById('successMessage');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault(); // Evita la recarga de la página al enviar el formulario
+
+                // Recopila los datos del formulario
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+
+                // URL de la hoja de Google Sheets (REEMPLAZAR CON TU URL REAL)
+                const googleSheetsURL = 'https://script.google.com/macros/s/TU_ID_DE_DEPLOYMENT/exec';
+
+                // Función simulada para verificar si la fecha y hora ya están ocupadas
+                async function checkDuplicateAppointment(fecha, hora) {
+                    // **IMPORTANTE:** Esta es una simulación. En una aplicación real,
+                    // deberías consultar tu hoja de Google Sheets o una base de datos
+                    // para verificar la disponibilidad real.
+                    console.log(`Verificando si existe cita en fecha: ${fecha}, hora: ${hora}`);
+                    // Aquí iría la lógica para consultar Google Sheets.
+                    // Por ahora, simulamos algunas citas ocupadas para probar:
+                    const citasOcupadas = [
+                        { fecha: '2025-04-18', hora: '10:00' },
+                        { fecha: '2025-04-20', hora: '15:30' }
+                    ];
+                    return citasOcupadas.some(cita => cita.fecha === fecha && cita.hora === hora);
+                }
+
+                // Realiza la verificación de citas duplicadas
+                const isDuplicate = await checkDuplicateAppointment(data.fecha, data.hora);
+
+                if (isDuplicate) {
+                    errorMessageDiv.textContent = 'La fecha y hora seleccionadas ya están
